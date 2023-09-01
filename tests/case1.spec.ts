@@ -1,52 +1,31 @@
 import { test, expect } from '@playwright/test';
+import { Api } from '../data/api';
+/**
+  * Task : Your job is to rework the 1 test. 
+  * 
+  * Background: 
+  * There is a 'API' call that gets made and the browser turns that backend value into a human readable label.
+  * A test needs to be written that tests to make sure that the conversion is correct. The frontend hasn't been delievered yet
+  * but a way to convert the backend type into a frontend type can be done in the meantime.
+  * 
+  * Notes:
+  * The backend data can vary so make sure whatever value is returned by the backend will equal the expected frontend label
+  * There are only ever 5 elements returned by the API
+  * 
+*/
 
-/** Front end labels (same order as backend data) : 
- * 
- * Some value
- * A really long name
- * Standard
- * Short
- * Another value
+/** How the labels are mapped : 
+ * some-value = Some value
+ * a-really-long-name = A really long name
+ * standard = Standard
+ * short = Short
+ * another-kinda-value = Another value
  */
-/** API doc spec */
-const BE_DATA = {
-  data: [
-    {
-      "name": "some-value",
-    },
-    {
-      "name": "a-really-long-name",
-    },
-    {
-      "name": "standard",
-    },
-    {
-      "name": "short",
-    },
-    {
-      "name": "another-kinda-value",
-    }
-  ]
-};
-
-class Api{
-  static async get_value(){
-    let response: any[] = [];
-    
-    for(let i = 0;i < 5;i++){
-      let idx = Math.floor(Math.random() * 5);
-      response.push(BE_DATA.data[idx]);
-    }
-    return Promise.resolve({data: response});
-  }
-}
 
 test('Title conversion', async ({page}) => {
   /**
    * Originally it was thought that the data would be in the same order everytime and the below test was written. However when the API
    * was implemented, it was found that the data varies.
-   * 
-   * Task : Write a test that will check all backend labels match the expected front end label. 
    */
   let json = await Api.get_value();
   console.log(json);
