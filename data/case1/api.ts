@@ -17,8 +17,14 @@ const BE_DATA = {
         "name": "another-kinda-value",
       }
     ]
-  };
-
+};
+interface Plane{
+  name: string;
+  fuelCapacity: number;
+  wingspan: number;
+  passesngers: number;
+  manufacturer: string;
+}
 export class Api{
     static async get_value(){
       let response: any[] = [];

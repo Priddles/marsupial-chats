@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { Api } from '../data/api';
+import { Api } from '../data/case1/api';
 /**
   * Task : Your job is to rework the 1 test. 
   * 
