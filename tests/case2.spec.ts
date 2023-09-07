@@ -2,7 +2,8 @@ import { test, expect } from '@playwright/test';
 import { Api } from '../data/case2/api';
 import { get_environment, get_token } from '../data/case2/funcs';
 /**
- * Task : To come up with a way of handling test data that will be used across multiple files. Update case2.1.spec.ts
+ * Task : To come up with a way of handling test data that will be used across multiple files. 
+ * Any solution you design should be able to work in both case2 and case2.1.
  * 
  * Background : You are working at an airport and an API is being built to get aircraft information. You've written 1 test
  * to ensure that when the plane ID is passed it, then it should return the correct details. However the credentials change 
@@ -20,7 +21,6 @@ import { get_environment, get_token } from '../data/case2/funcs';
  */
 /** All boeing tests go here */
 test('Get boeing plane and confirm details', async ({ }) => {
-    process.env.ENV = 'dev'; // Environment details
     const env = get_environment();
     let testdata = { planeId: -1, manufacturerId: -1 };
     let username = '';

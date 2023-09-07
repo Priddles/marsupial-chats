@@ -14,6 +14,7 @@ import { get_environment, get_token } from '../data/case2/funcs';
  * }
  */
 test('Check lockheed ID returns correctly', async ({ page }) => {
+    //process.env.ENV = 'uat'; // Environment details
     let testdata = { planeId: 2, manufacturerId: 2 };
     // Below works for dev only
     let username = 'Certified';
