@@ -31,9 +31,10 @@ export class Api{
       }
       if(plane_id == 1){
         response = {name: "747", fuelCapacity: 12000, wingspan: 30.0, passengers: 100, manufacturer: "boeing"};
-        return Promise.resolve({data: response});
-      }else{
+      }else if(plane_id == 2){
         response = {name: "sr71", fuelCapacity: 18000, wingspan: 50.0, passengers: 4, manufacturer: "lockheed"};
+      }else{
+        response = error;
       }
       return Promise.resolve({data: response});
     }

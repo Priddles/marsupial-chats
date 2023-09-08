@@ -11,6 +11,7 @@ import { get_environment, get_token } from '../data/case2/funcs';
  * 
  * A new aircraft is added to the APIs with the planeId value of 2. You want to create a new spec file to test the new aircraft
  * but don't want to copy paste all your code below, as more aircraft will be added and it will become cumbersome to keep copy pasting.
+ * Also be aware that other test data fields may need to be added in the future.
  * 
  * Design a way to handle the test data across multiple files so that it is easy to create any new spec files.
  * 
@@ -18,8 +19,12 @@ import { get_environment, get_token } from '../data/case2/funcs';
  * in different environments. There will only ever be 3 environments: dev, uat, trn. 
  * If an invalid auth token is passed to the API call, then an error object will be returned instead.
  * 
+ * Currently the get_plane() function only has 2 ids present: 1 and 2. Other ids will result in an error.
+ * 
  */
-/** All boeing tests go here */
+/** All boeing tests go here
+ * You can edit the below test to implement your solution.
+ */
 test('Get boeing plane and confirm details', async ({ }) => {
     const env = get_environment();
     let testdata = { planeId: -1, manufacturerId: -1 };

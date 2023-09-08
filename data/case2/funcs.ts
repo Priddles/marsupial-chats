@@ -5,7 +5,7 @@ export function get_environment(){
     }
     return env;
 }
-
+/** DO NOT EDIT */
 export function get_token(username: string, password: string){
     return btoa(username+password);
 }
