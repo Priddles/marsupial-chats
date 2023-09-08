@@ -11,6 +11,7 @@ import { get_environment, get_token } from '../data/case2/funcs';
  * 
  * A new aircraft is added to the APIs with the planeId value of 2. You want to create a new spec file to test the new aircraft
  * but don't want to copy paste all your code below, as more aircraft will be added and it will become cumbersome to keep copy pasting.
+ * Also be aware that other test data fields may need to be added in the future.
  * 
  * Design a way to handle the test data across multiple files so that it is easy to create any new spec files.
  * 
