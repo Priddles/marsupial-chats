@@ -14,6 +14,7 @@ function encode(input: string){
  * But the search is a get call and the query gets passed in as a parameter. Since the query contains reserved characters this query needs to be encoded to work. 
  * 
  * To test if the solution has been found, pass in the correctly encoded string to the function check_answer(). If the encoding is correct then true will be returned.
+ * Solve the solution in any way that you can.
  */
 
 test('Encoding a complex query', async () => {
