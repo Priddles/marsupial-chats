@@ -24,9 +24,8 @@ test('Encoding a complex query', async () => {
      * https://www.w3schools.com/tags/ref_urlencode.ASP
      */
     const starting_string = `http://api.marsupials/search?query={ "request": "POST", "data": { "columns": [1, 2, 3], "query": "Select * From table Where 1=1 & text not in (set1,set2) & idx % 2 = 1" } }`;
-    console.log(starting_string);
+    const answer = encode(starting_string);
     // do some conversion and check
-    let answer = encode(starting_string);
     expect(check_answer(answer)).toBeTruthy(); 
 });
 
