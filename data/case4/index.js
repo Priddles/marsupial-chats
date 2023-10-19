@@ -41,19 +41,15 @@ const server = http.createServer((req, res) => {
         res.statusCode = 200;
         res.setHeader("Content-Type", "image/jpeg");
         fs.createReadStream(filePath).pipe(res);
+      }else{
+        res.end();
       }
     } else {
-      console.log("missed");
       filePath = path.resolve("./data/case4/404.html");
       res.statusCode = 404;
       res.setHeader("Content-Type", "text/html");
       fs.createReadStream(filePath).pipe(res);
     }
-  } else {
-    filePath = path.resolve("./404.html");
-    res.statusCode = 404;
-    res.setHeader("Content-Type", "text/html");
-    fs.createReadStream(filePath).pipe(res);
   }
 });
 
