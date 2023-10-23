@@ -18,8 +18,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
 <!-- Header -->
 <header class="w3-container w3-center w3-padding-32"> 
-  <h1><b>MY BLOG</b></h1>
-  <p>Welcome to the blog of <span class="w3-tag">unknown</span></p>
+  <h1><b>Bridges B Built</b></h1>
 </header>
 
 <!-- Grid -->
@@ -28,16 +27,15 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- Blog entries -->
 <div class="w3-col l8 s12">
   <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
-    <img src="bridge.jpg" alt="Nature" style="width:100%">
+  <div class="w3-card-4 w3-margin w3-white" data-testid="card">
+    <img src="bridge.jpg" alt="Bridge1" style="width:100%">
     <div class="w3-container">
-      <h3 data-testid="title"><b>TITLE ADF</b></h3>
-      <h5 data-testid="description">Title description, <span class="w3-opacity">April 7, 2014</span></h5>
+      <h3 data-testid="title"><b>Suspension bridge</b></h3>
+      <h5>These suspend, <span data-testid="card-date" class="w3-opacity">October 11, 2023</span></h5>
     </div>
 
-    <div class="w3-container">
-      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <div class="w3-container" data-testid="card-body">
+      <p>A suspension bridge is a type of bridge in which the deck is hung below suspension cables on vertical suspenders. The first modern examples of this type of bridge were built in the early 1800s. Simple suspension bridges, which lack vertical suspenders, have a long history in many mountainous parts of the world.</p>
       <div class="w3-row">
         <div class="w3-col m8 s12">
           <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
@@ -51,16 +49,15 @@ and is wrapped around the whole page content, except for the footer in this exam
   <hr>
 
   <!-- Blog entry -->
-  <div class="w3-card-4 w3-margin w3-white">
+  <div class="w3-card-4 w3-margin w3-white" data-testid="card">
   <img src="bridge2.jpg" alt="Bridge2" style="width:100%">
     <div class="w3-container">
-      <h3><b>BLOG ENTRY</b></h3>
-      <h5>Title description, <span class="w3-opacity">April 2, 2014</span></h5>
+      <h3><b>Beam bridge</b></h3>
+      <h5>Nice and simple, <span class="w3-opacity" data-testid="card-date">June 22, 2023</span></h5>
     </div>
 
-    <div class="w3-container">
-      <p>Mauris neque quam, fermentum ut nisl vitae, convallis maximus nisl. Sed mattis nunc id lorem euismod placerat. Vivamus porttitor magna enim, ac accumsan tortor cursus at. Phasellus sed ultricies mi non congue ullam corper. Praesent tincidunt sed
-        tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <div class="w3-container" data-testid="card-body">
+      <p>Beam bridges are the simplest structural forms for bridge spans supported by an abutment or pier at each end. No moments are transferred throughout the support, hence their structural type is known as simply supported.</p>
       <div class="w3-row">
         <div class="w3-col m8 s12">
           <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
@@ -77,54 +74,61 @@ and is wrapped around the whole page content, except for the footer in this exam
 <!-- Introduction menu -->
 <div class="w3-col l4">
   <!-- About Card -->
-  <div class="w3-card w3-margin w3-margin-top">
-  <img src="/avatar_g.jpg" style="width:100%">
+  <div class="w3-card w3-margin w3-margin-top" data-testid="about">
+  <img src="/nicebridge.jpg" style="width:100%">
     <div class="w3-container w3-white">
-      <h4><b>My Name</b></h4>
-      <p>Just me, myself and I, exploring the universe of uknownment. I have a heart of love and a interest of lorem ipsum and mauris neque quam blog. I want to share my world with you.</p>
+      <h4><b>About</b></h4>
+      <p data-testid="about-description">This page is all about bridges. They are tall. They are long. They are old. They can be made of different things.</p>
+      <button>View</button>
+      <button>Get RSS feed</button>
+      <p>Total bridges : <span class="w3-tag">10</span></p>
     </div>
   </div><hr>
   
   <!-- Posts -->
-  <div class="w3-card w3-margin">
+  <div class="w3-card w3-margin" data-testid="posts">
     <div class="w3-container w3-padding">
       <h4>Popular Posts</h4>
     </div>
     <ul class="w3-ul w3-hoverable w3-white">
       <li class="w3-padding-16">
-        <img src="/workshop.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Lorem</span><br>
-        <span>Sed mattis nunc</span>
+        <img src="/choochoo.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span data-testid="post-title" class="w3-large">Train bridge</span><br>
+        <span data-testid="post-body">See this cool train</span>
+        <button onclick="window.location = '/choochoo.jpg'">View post</button>
       </li>
       <li class="w3-padding-16">
-        <img src="/gondol.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Ipsum</span><br>
-        <span>Praes tinci sed</span>
+        <img src="/strayabridge.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span data-testid="post-title" class="w3-large">Tasmania</span><br>
+        <span data-testid="post-body">Some road in tassie</span>
+        <button onclick="window.location = '/strayabridge.jpg'">View post</button>
       </li> 
       <li class="w3-padding-16">
-        <img src="/skies.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Dorum</span><br>
-        <span>Ultricies congue</span>
+        <img src="/woodbridge.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span data-testid="post-title" class="w3-large">Forest</span><br>
+        <span data-testid="post-body">A nice walk I'm sure</span>
+        <button onclick="window.location = '/woodbridge.jpg'">View post</button>
       </li>   
       <li class="w3-padding-16 w3-hide-medium w3-hide-small">
-        <img src="/rock.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
-        <span class="w3-large">Mingsum</span><br>
-        <span>Lorem ipsum dipsum</span>
+        <img src="/shitbridge.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span data-testid="post-title" class="w3-large">Pier</span><br>
+        <span data-testid="post-body">Depressing</span>
+        <button onclick="window.location = '/shitbridge.jpg'">View post</button>
       </li>  
     </ul>
   </div>
   <hr> 
  
   <!-- Labels / tags -->
-  <div class="w3-card w3-margin">
+  <div class="w3-card w3-margin" data-testid="tags">
     <div class="w3-container w3-padding">
       <h4>Tags</h4>
     </div>
     <div class="w3-container w3-white">
-    <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
-      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+    <p><span class="w3-tag w3-black w3-margin-bottom">Bridges</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Trains</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Long</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Strong</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Old</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
       <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
     </p>
     </div>

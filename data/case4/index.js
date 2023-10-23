@@ -6,7 +6,7 @@ const hostname = "localhost";
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-  console.log("Request for " + req.url + " by method " + req.method);
+  //console.log("Request for " + req.url + " by method " + req.method);
 
   if (req.method == "GET") {
     var fileUrl;
@@ -18,7 +18,7 @@ const server = http.createServer((req, res) => {
 
     var filePath = path.resolve("./data/case4/" + fileUrl);
     const fileExt = path.extname(filePath);
-    console.log(`Filepath : ${filePath}`);
+    //console.log(`Filepath : ${filePath}`);
     if (fileExt == ".html") {
       fs.exists(filePath, (exists) => {
         if (!exists) {
@@ -35,6 +35,10 @@ const server = http.createServer((req, res) => {
     } else if (fileExt == ".css") {
       res.statusCode = 200;
       res.setHeader("Content-Type", "text/css");
+      fs.createReadStream(filePath).pipe(res);
+    } else if (fileExt == ".ico") {
+      res.statusCode = 200;
+      res.setHeader("Content-Type", "image/vnd.microsoft.icon");
       fs.createReadStream(filePath).pipe(res);
     } else if (fileExt == ".jpg") {
       if (fs.existsSync(filePath)) {
