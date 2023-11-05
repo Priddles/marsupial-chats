@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+</head>
+<body class="w3-light-grey">
+
+<!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+<div class="w3-content" style="max-width:1400px">
+
+<!-- Header -->
+<header class="w3-container w3-center w3-padding-32"> 
+  <h1><b>Bridges B Built</b></h1>
+</header>
+
+<!-- Grid -->
+<div class="w3-row">
+
+<!-- Blog entries -->
+<div class="w3-col l8 s12">
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white" data-testid="card">
+    <img src="bridge.jpg" alt="Bridge1" style="width:100%">
+    <div class="w3-container">
+      <h3 data-testid="title"><b>Suspension bridge</b></h3>
+      <h5>These suspend, <span data-testid="card-date" class="w3-opacity">October 11, 2023</span></h5>
+    </div>
+
+    <div class="w3-container" data-testid="card-body">
+      <p>A suspension bridge is a type of bridge in which the deck is hung below suspension cables on vertical suspenders. The first modern examples of this type of bridge were built in the early 1800s. Simple suspension bridges, which lack vertical suspenders, have a long history in many mountainous parts of the world.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-tag">0</span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <hr>
+
+  <!-- Blog entry -->
+  <div class="w3-card-4 w3-margin w3-white" data-testid="card">
+  <img src="bridge2.jpg" alt="Bridge2" style="width:100%">
+    <div class="w3-container">
+      <h3><b>Beam bridge</b></h3>
+      <h5>Nice and simple, <span class="w3-opacity" data-testid="card-date">June 22, 2023</span></h5>
+    </div>
+
+    <div class="w3-container" data-testid="card-body">
+      <p>Beam bridges are the simplest structural forms for bridge spans supported by an abutment or pier at each end. No moments are transferred throughout the support, hence their structural type is known as simply supported.</p>
+      <div class="w3-row">
+        <div class="w3-col m8 s12">
+          <p><button class="w3-button w3-padding-large w3-white w3-border"><b>READ MORE »</b></button></p>
+        </div>
+        <div class="w3-col m4 w3-hide-small">
+          <p><span class="w3-padding-large w3-right"><b>Comments  </b> <span class="w3-badge">2</span></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- END BLOG ENTRIES -->
+</div>
+
+<!-- Introduction menu -->
+<div class="w3-col l4">
+  <!-- About Card -->
+  <div class="w3-card w3-margin w3-margin-top" data-testid="about">
+  <img src="/nicebridge.jpg" style="width:100%">
+    <div class="w3-container w3-white">
+      <h4><b>About</b></h4>
+      <p data-testid="about-description">This page is all about bridges. They are tall. They are long. They are old. They can be made of different things.</p>
+      <button>View</button>
+      <button>Get RSS feed</button>
+      <p>Total bridges : <span class="w3-tag">10</span></p>
+    </div>
+  </div><hr>
+  
+  <!-- Posts -->
+  <div class="w3-card w3-margin" data-testid="posts">
+    <div class="w3-container w3-padding">
+      <h4>Popular Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="/choochoo.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span data-testid="post-title" class="w3-large">Train bridge</span><br>
+        <span data-testid="post-body">See this cool train</span>
+        <button onclick="window.location = '/choochoo.jpg'">View post</button>
+      </li>
+      <li class="w3-padding-16">
+        <img src="/strayabridge.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span data-testid="post-title" class="w3-large">Tasmania</span><br>
+        <span data-testid="post-body">Some road in tassie</span>
+        <button onclick="window.location = '/strayabridge.jpg'">View post</button>
+      </li> 
+      <li class="w3-padding-16">
+        <img src="/woodbridge.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span data-testid="post-title" class="w3-large">Forest</span><br>
+        <span data-testid="post-body">A nice walk I'm sure</span>
+        <button onclick="window.location = '/woodbridge.jpg'">View post</button>
+      </li>   
+      <li class="w3-padding-16 w3-hide-medium w3-hide-small">
+        <img src="/shitbridge.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span data-testid="post-title" class="w3-large">Pier</span><br>
+        <span data-testid="post-body">Depressing</span>
+        <button onclick="window.location = '/shitbridge.jpg'">View post</button>
+      </li>  
+    </ul>
+  </div>
+  <hr> 
+ 
+  <!-- Labels / tags -->
+  <div class="w3-card w3-margin" data-testid="tags">
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">Bridges</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Trains</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Long</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Strong</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Old</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+    </p>
+    </div>
+  </div>
+  
+<!-- END Introduction Menu -->
+</div>
+
+<!-- END GRID -->
+</div><br>
+
+<!-- END w3-content -->
+</div>
+
+<!-- Footer -->
+<footer class="w3-container w3-dark-grey w3-padding-32 w3-margin-top">
+  <button class="w3-button w3-black w3-disabled w3-padding-large w3-margin-bottom">Previous</button>
+  <button class="w3-button w3-black w3-padding-large w3-margin-bottom">Next »</button>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+</body>
+</html>
